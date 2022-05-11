@@ -38,7 +38,7 @@ public class D05_hoverCategoriesStepDef {
         @And ("user hover in page and select sub category")
         public void user_hover() throws InterruptedException {
             // Locating the Main Menu (Parent element)
-            WebElement mainMenu = driver.findElement(By.xpath("</html/body/div[6]/div[2]/ul[1]/li[2]/a"));
+            WebElement mainMenu = driver.findElement(By.xpath("/html/body/div[6]/div[2]/ul[1]/li[2]/a"));
 
             //Instantiating Actions class
             Actions actions = new Actions(driver);
@@ -53,7 +53,7 @@ public class D05_hoverCategoriesStepDef {
             actions.moveToElement(subMenu);
 
             //build()- used to compile all the actions into a single step
-            actions.click().build().perform();
+           actions.click().build().perform();
             Thread.sleep(3000);
 
         }
