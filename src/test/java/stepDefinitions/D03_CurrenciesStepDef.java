@@ -25,7 +25,7 @@ public class D03_CurrenciesStepDef {
         driver = new ChromeDriver();
 
         //3 - navigate to website
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         Thread.sleep(2000);
 
     }

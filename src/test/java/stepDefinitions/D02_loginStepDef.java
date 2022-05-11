@@ -26,7 +26,7 @@ public class D02_loginStepDef {
         driver = new ChromeDriver();
 
         //3 - navigate to website
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         Thread.sleep(2000);
         login = new P02_login(driver);
 
