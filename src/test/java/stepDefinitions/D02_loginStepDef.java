@@ -47,16 +47,19 @@ public class D02_loginStepDef {
                 Thread.sleep(3000);
                 String expectedResult = "https://demo.nopcommerce.com/";
                 String actualResult = driver.getCurrentUrl();
-                //Assert.assertTrue(actualResult.contains(expectedResult));
                 Assert.assertEquals(actualResult.contains(expectedResult),true);
-
             }
 
     @And("user click login button")
     public void login_button() throws InterruptedException {
 
         driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button")).click();
-
+        Thread.sleep(2000);
+        //check that my account menu is appear
+        String expectedmyAccount = "/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a";
+        String actualmyAccount = String.valueOf(driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a")));
+        System.out.println(actualmyAccount);
+        Assert.assertTrue(actualmyAccount.contains(expectedmyAccount));
         Thread.sleep(4000);
     }
 
