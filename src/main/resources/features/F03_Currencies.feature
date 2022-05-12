@@ -1,3 +1,4 @@
+@regression
 Feature: user must be able to open site and push on Currency
 Background: user open browser Site for select currency
 Given user open browser for select currency

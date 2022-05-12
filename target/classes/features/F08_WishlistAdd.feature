@@ -1,3 +1,4 @@
+@regression
 Feature: Add product to wish list
   Background: user open site and add product to wishlist
     Given user open browser and add wishlist

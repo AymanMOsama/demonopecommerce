@@ -1,3 +1,4 @@
+@regression
 Feature: user must be able to open site and push register
 Background: user open browser Site
   Given user open browser

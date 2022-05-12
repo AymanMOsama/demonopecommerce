@@ -1,3 +1,4 @@
+@regression
 Feature: Add product to shopping cart
   Background: user open site and add product to shopping cart
     Given user open browser and add shopping

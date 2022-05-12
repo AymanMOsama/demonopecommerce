@@ -27,6 +27,14 @@
             <artifactId>cucumber-testng</artifactId>
             <version>7.3.4</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.3.4</version>
+            <scope>test</scope>
+        </dependency>
+
 
     </dependencies>
 

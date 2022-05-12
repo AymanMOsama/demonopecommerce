@@ -1,3 +1,4 @@
+@regression
 Feature: user can push to slider
   Background: user open site and click on slider
     Given user open browser and click to slider

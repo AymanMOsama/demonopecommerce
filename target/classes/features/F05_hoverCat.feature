@@ -1,3 +1,4 @@
+@regression
 Feature: hover on category
   Background: user open site for hover
     Given user open browser and hover category
