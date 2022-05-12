@@ -1,3 +1,4 @@
+@regression
 Feature: user must be able to open site and push login
   Background: user open browser Site for login
     Given user open browser for login

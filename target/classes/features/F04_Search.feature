@@ -1,3 +1,4 @@
+@regression
 Feature: user must be able to open site and search
   Background: user open browser Site for search
     Given user open browser and search
