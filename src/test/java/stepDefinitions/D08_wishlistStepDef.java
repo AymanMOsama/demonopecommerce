@@ -15,7 +15,7 @@ public class D08_wishlistStepDef {
 
     public void user_open_browsers() throws InterruptedException {
         //1-bride between test scripts and browsers
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\aymamoh\\Downloads\\Pages-object-website-http-demo.nopcommerce.com-master(1)\\demonopecommerce\\src\\main\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
 
         //2- new object of webdriver
         driver = new ChromeDriver();
