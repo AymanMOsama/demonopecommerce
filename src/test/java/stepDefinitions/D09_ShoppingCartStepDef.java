@@ -30,7 +30,7 @@ public class D09_ShoppingCartStepDef {
     public void user_nav_cart() throws InterruptedException {
         //open site
         driver.navigate().to("https://demo.nopcommerce.com/camera-photo");
-        Thread.sleep(4000);
+        Thread.sleep(2000);
     }
 
 
@@ -45,7 +45,7 @@ public class D09_ShoppingCartStepDef {
     @Then("Close Browser after shopping")
     public void Close() throws InterruptedException {
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.quit();
     }
 }

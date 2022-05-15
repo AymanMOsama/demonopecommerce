@@ -35,13 +35,13 @@ public class D03_CurrenciesStepDef {
         driver.navigate().to("https://demo.nopcommerce.com/");
         Select selectCurrency = new Select(driver.findElement(By.xpath("//*[@id=\"customerCurrency\"]")));
         selectCurrency.selectByValue("https://demo.nopcommerce.com/changecurrency/6?returnUrl=%2F");
-            Thread.sleep(4000);
+            Thread.sleep(2000);
         }
 
     @Then("Close Browser after select currency")
     public void Close_browser() throws InterruptedException {
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.quit();
 
     }

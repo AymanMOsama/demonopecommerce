@@ -29,7 +29,7 @@ public class D08_wishlistStepDef {
     public void user_nav() throws InterruptedException {
         //open site
         driver.navigate().to("https://demo.nopcommerce.com/camera-photo");
-        Thread.sleep(4000);
+        Thread.sleep(2000);
     }
 
 
@@ -44,7 +44,7 @@ public class D08_wishlistStepDef {
     @Then("Close Browser after wish")
     public void Close() throws InterruptedException {
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.quit();
     }
 }

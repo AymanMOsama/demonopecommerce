@@ -31,7 +31,7 @@ public class D07_followUsStepDef {
     public void user_nav() throws InterruptedException {
         //open site
         driver.navigate().to("https://demo.nopcommerce.com/");
-        Thread.sleep(4000);
+        Thread.sleep(2000);
     }
 
 
@@ -54,14 +54,14 @@ public class D07_followUsStepDef {
 
         //build()- used to compile all the actions into a single step
         actions.click().build().perform();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
     }
 
     @Then("Close Browser after finish")
     public void Close() throws InterruptedException {
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.quit();
 
     }

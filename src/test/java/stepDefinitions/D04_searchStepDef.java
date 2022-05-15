@@ -34,13 +34,13 @@ public class D04_searchStepDef {
         driver.findElement(By.id("small-searchterms")).sendKeys("Nokia Lumia 1020");
         //click search
         driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[2]/div[2]/form/button")).click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
     }
 
     @Then("Close Browser after search")
     public void Close_browser() throws InterruptedException {
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.quit();
 
     }

@@ -31,7 +31,7 @@ public class D05_hoverCategoriesStepDef {
         public void user_nav() throws InterruptedException {
             //open site
             driver.navigate().to("https://demo.nopcommerce.com/");
-            Thread.sleep(4000);
+            Thread.sleep(2000);
         }
 
 
@@ -61,7 +61,7 @@ public class D05_hoverCategoriesStepDef {
         @Then("Close Browser after Hover")
         public void Close() throws InterruptedException {
 
-            Thread.sleep(4000);
+            Thread.sleep(2000);
             driver.quit();
 
         }

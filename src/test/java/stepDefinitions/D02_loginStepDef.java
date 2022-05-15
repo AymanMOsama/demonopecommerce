@@ -46,7 +46,7 @@ public class D02_loginStepDef {
     @When("^user enter \"(.*)\" and \"(.*)\"$")
             public void valid_data (String username , String password) throws InterruptedException {
                 login.P02_login(username,password);
-                Thread.sleep(3000);
+                Thread.sleep(2000);
                 String expectedResult = "https://demo.nopcommerce.com/";
                 String actualResult = driver.getCurrentUrl();
                 Assert.assertEquals(actualResult.contains(expectedResult),true);
@@ -62,14 +62,14 @@ public class D02_loginStepDef {
         String actualmyAccount = String.valueOf(driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a")));
         System.out.println(actualmyAccount);
         Assert.assertTrue(actualmyAccount.contains(expectedmyAccount));
-        Thread.sleep(4000);
+        Thread.sleep(2000);
     }
 
 
     @Then("Close Browser after login")
     public void Close_browser() throws InterruptedException {
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.quit();
 
     }

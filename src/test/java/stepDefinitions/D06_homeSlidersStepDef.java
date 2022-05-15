@@ -29,7 +29,7 @@ public class D06_homeSlidersStepDef {
     public void user_nav_cart() throws InterruptedException {
         //open site
         driver.navigate().to("https://demo.nopcommerce.com");
-        Thread.sleep(4000);
+        Thread.sleep(2000);
     }
 
 
@@ -44,7 +44,7 @@ public class D06_homeSlidersStepDef {
     @Then("Close Browser after push slider")
     public void Close() throws InterruptedException {
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         driver.quit();
 
 
