@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="172.675">
+<testcase classname="user must be able to open site and push register" name="user open browser and push register" time="21.938">
+<system-out><![CDATA[When user register..........................................................passed
+Then user could register successfully.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user must be able to open site and push login" name="user could login with valid credentials" time="22.395">
+<system-out><![CDATA[When user navigate to login page............................................passed
+Then user enter "kalabala20055055@hotmail.com" and "MamoCompany@"...........passed
+Then user click login button................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user must be able to open site and push on Currency" name="user could select currency" time="18.15">
+<system-out><![CDATA[When user navigate to home page and select currency.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="user must be able to open site and search" name="user could open site and search" time="18.049">
+<system-out><![CDATA[And user navigate to home page and search...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="hover on category" name="user could open site and hover" time="19.793">
+<system-out><![CDATA[When user navigate to home page and hover...................................passed
+Then user hover in page and select sub category.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can push to slider" name="First Slider user could open site and push slider" time="14.647">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user push slider.......................................................passed
+Then relative product is displayed..........................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.D06_homeSlidersStepDef.product_displayed(D06_homeSlidersStepDef.java:20)
+	at ✽.relative product is displayed(file:///C:/Users/Mamo/IdeaProjects/demonopecommerce/src/main/resources/features/F06_homeSliders.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="user can push to slider" name="Second Slider user could open site and push slider" time="13.039">
+<failure message="expected [https://demo.nopcommerce.com/iphones6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user push second slider................................................passed
+Then relative product second slider is displayed............................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphones6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.D06_homeSlidersStepDef.product_second_displayed(D06_homeSlidersStepDef.java:39)
+	at ✽.relative product second slider is displayed(file:///C:/Users/Mamo/IdeaProjects/demonopecommerce/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="user can push on followUs" name="user could open site and push follow us" time="15.264">
+<system-out><![CDATA[When user hover to follow us................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add product to wish list" name="user could open site add product to wish list" time="13.09">
+<system-out><![CDATA[When user push on add to wishlist...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add product to shopping cart" name="user could open site add product to shopping cart" time="15.921">
+<system-out><![CDATA[When user navigate to product pages.........................................passed
+Then user push on add to shopping cart......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
