@@ -32,7 +32,7 @@ public class D01_registerStepDef {
         DateOfBirthYear.selectByValue("1990");
 
         //insert Email
-        Hooks.driver.findElement(By.id("Email")).sendKeys("kalabala2005505@hotmail.com");
+        Hooks.driver.findElement(By.id("Email")).sendKeys("kalabala20055055@hotmail.com");
 
         //insert company
         Hooks.driver.findElement(By.id("Company")).sendKeys("MamoCompany");

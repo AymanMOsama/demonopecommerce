@@ -11,7 +11,13 @@ import org.junit.runner.RunWith;
 
    features = "src\\main\\resources\\features",
    glue = "stepDefinitions",
-   tags = "@regression"
+   tags = "@regression",
+        plugin = {"pretty",
+                "html:target/cucumber.html",
+                "json:target/cucumber.json",
+                "junit:target/cukes.xml",
+                "rerun:target/rerun.txt"
+        }
 
 
 
