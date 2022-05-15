@@ -14,66 +14,39 @@ import pages.P02_login;
 
 public class D02_loginStepDef {
 
-    WebDriver driver = null;
 
     P02_login login;
 
-    @Given("user open browser for login")
 
-    public void user_open_browser() throws InterruptedException {
-        //1-bride between test scripts and browsers
-        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\chromedriver.exe");
+    @When("user navigate to login page")
 
-        //2- new object of webdriver
-        driver = new ChromeDriver();
+    public void user_navigate() {
+        Hooks.driver.findElement(By.className("ico-login")).click();
+        login = new P02_login(Hooks.driver);
 
-        //3 - navigate to website
-        driver.manage().window().maximize();
+
+    }
+
+    @Then("^user enter \"(.*)\" and \"(.*)\"$")
+    public void valid_data(String username, String password) throws InterruptedException {
+        login.P02_login(username, password);
         Thread.sleep(2000);
-        login = new P02_login(driver);
-
+        String expectedResult = "https://demo.nopcommerce.com/";
+        String actualResult = Hooks.driver.getCurrentUrl();
+        Assert.assertEquals(actualResult.contains(expectedResult), true);
     }
 
-    @And("user navigate to login page")
-
-            public void user_navigate()
-    {
-        driver.navigate().to("https://demo.nopcommerce.com/");
-        driver.findElement(By.className("ico-login")).click();
-
-    }
-
-    @When("^user enter \"(.*)\" and \"(.*)\"$")
-            public void valid_data (String username , String password) throws InterruptedException {
-                login.P02_login(username,password);
-                Thread.sleep(2000);
-                String expectedResult = "https://demo.nopcommerce.com/";
-                String actualResult = driver.getCurrentUrl();
-                Assert.assertEquals(actualResult.contains(expectedResult),true);
-            }
-
-    @And("user click login button")
+    @Then("user click login button")
     public void login_button() throws InterruptedException {
 
-        driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button")).click();
+        Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button")).click();
         Thread.sleep(2000);
         //check that my account menu is appear
         String expectedmyAccount = "/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a";
-        String actualmyAccount = String.valueOf(driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a")));
+        String actualmyAccount = String.valueOf(Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[1]/a")));
         System.out.println(actualmyAccount);
         Assert.assertTrue(actualmyAccount.contains(expectedmyAccount));
         Thread.sleep(2000);
     }
-
-
-    @Then("Close Browser after login")
-    public void Close_browser() throws InterruptedException {
-
-        Thread.sleep(2000);
-        driver.quit();
-
-    }
-
-
 
 }
