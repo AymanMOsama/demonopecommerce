@@ -13,15 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 public class D05_hoverCategoriesStepDef {
 
 
-        @When("user navigate to home page and hover")
-        public void user_nav() throws InterruptedException {
-            //open site
-            Hooks.driver.navigate().to("https://demo.nopcommerce.com/");
-            Thread.sleep(2000);
-        }
-
-
-        @Then ("user hover in page and select sub category")
+        @When ("user hover in page and select sub category")
         public void user_hover() throws InterruptedException {
             // Locating the Main Menu (Parent element)
             WebElement mainMenu = Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[2]/ul[1]/li[2]/a"));

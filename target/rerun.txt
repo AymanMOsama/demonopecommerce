@@ -1,1 +1,2 @@
+file:src/main/resources/features/F05_hoverCat.feature:5
 file:src/main/resources/features/F06_homeSliders.feature:5:9

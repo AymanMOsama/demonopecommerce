@@ -1,30 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="172.675">
-<testcase classname="user must be able to open site and push register" name="user open browser and push register" time="21.938">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="225.95">
+<testcase classname="user must be able to open site and push register" name="user open browser and push register" time="21.911">
 <system-out><![CDATA[When user register..........................................................passed
 Then user could register successfully.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user must be able to open site and push login" name="user could login with valid credentials" time="22.395">
+<testcase classname="user must be able to open site and push login" name="user could login with valid credentials" time="20.052">
 <system-out><![CDATA[When user navigate to login page............................................passed
 Then user enter "kalabala20055055@hotmail.com" and "MamoCompany@"...........passed
 Then user click login button................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user must be able to open site and push on Currency" name="user could select currency" time="18.15">
+<testcase classname="user must be able to open site and push on Currency" name="user could select currency" time="15.164">
 <system-out><![CDATA[When user navigate to home page and select currency.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user must be able to open site and search" name="user could open site and search" time="18.049">
+<testcase classname="user must be able to open site and search" name="user could open site and search" time="15.943">
 <system-out><![CDATA[And user navigate to home page and search...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="hover on category" name="user could open site and hover" time="19.793">
-<system-out><![CDATA[When user navigate to home page and hover...................................passed
-Then user hover in page and select sub category.............................passed
-]]></system-out>
+<testcase classname="hover on category" name="user could open site and hover" time="16.215">
+<failure message="element not interactable: https://demo.nopcommerce.com/electronics has no size and location&#10;  (Session info: chrome=101.0.4951.54)&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: 'DTCAIDEV001', ip: '172.16.2.190', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_131'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c0f47880106558d6df5165db1a7d5482, actions {actions=[org.openqa.selenium.interactions.Sequence@1f415ad]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\aymamoh\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57540}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57540/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c0f47880106558d6df5165db1a7d5482" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[When user navigate to home page and hover...................................passed
+Then user hover in page and select sub category.............................failed
+
+StackTrace:
+org.openqa.selenium.ElementNotInteractableException: element not interactable: https://demo.nopcommerce.com/electronics has no size and location
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DTCAIDEV001', ip: '172.16.2.190', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c0f47880106558d6df5165db1a7d5482, actions {actions=[org.openqa.selenium.interactions.Sequence@1f415ad]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\aymamoh\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57540}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57540/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c0f47880106558d6df5165db1a7d5482
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:635)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:656)
+	at stepDefinitions.D05_hoverCategoriesStepDef.user_hover(D05_hoverCategoriesStepDef.java:42)
+	at ✽.user hover in page and select sub category(file:///C:/Users/aymamoh/Downloads/Pages-object-website-http-demo.nopcommerce.com-master(1)/demonopecommerce/src/main/resources/features/F05_hoverCat.feature:7)
+]]></failure>
 </testcase>
-<testcase classname="user can push to slider" name="First Slider user could open site and push slider" time="14.647">
+<testcase classname="user can push to slider" name="First Slider user could open site and push slider" time="11.504">
 <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user push slider.......................................................passed
 Then relative product is displayed..........................................failed
 
@@ -37,10 +62,10 @@ java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-102
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
 	at stepDefinitions.D06_homeSlidersStepDef.product_displayed(D06_homeSlidersStepDef.java:20)
-	at ✽.relative product is displayed(file:///C:/Users/Mamo/IdeaProjects/demonopecommerce/src/main/resources/features/F06_homeSliders.feature:7)
+	at ✽.relative product is displayed(file:///C:/Users/aymamoh/Downloads/Pages-object-website-http-demo.nopcommerce.com-master(1)/demonopecommerce/src/main/resources/features/F06_homeSliders.feature:7)
 ]]></failure>
 </testcase>
-<testcase classname="user can push to slider" name="Second Slider user could open site and push slider" time="13.039">
+<testcase classname="user can push to slider" name="Second Slider user could open site and push slider" time="11.352">
 <failure message="expected [https://demo.nopcommerce.com/iphones6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user push second slider................................................passed
 Then relative product second slider is displayed............................failed
 
@@ -53,18 +78,34 @@ java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphones6] but f
 	at org.testng.Assert.assertEquals(Assert.java:655)
 	at org.testng.Assert.assertEquals(Assert.java:665)
 	at stepDefinitions.D06_homeSlidersStepDef.product_second_displayed(D06_homeSlidersStepDef.java:39)
-	at ✽.relative product second slider is displayed(file:///C:/Users/Mamo/IdeaProjects/demonopecommerce/src/main/resources/features/F06_homeSliders.feature:11)
+	at ✽.relative product second slider is displayed(file:///C:/Users/aymamoh/Downloads/Pages-object-website-http-demo.nopcommerce.com-master(1)/demonopecommerce/src/main/resources/features/F06_homeSliders.feature:11)
 ]]></failure>
 </testcase>
-<testcase classname="user can push on followUs" name="user could open site and push follow us" time="15.264">
-<system-out><![CDATA[When user hover to follow us................................................passed
+<testcase classname="user can push on followUs" name="user could open site and push follow us" time="21.899">
+<system-out><![CDATA[When user open facebook page................................................passed
+Then facebook is opened or no...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Add product to wish list" name="user could open site add product to wish list" time="13.09">
+<testcase classname="user can push on followUs" name="user could open site and push follow us twitter" time="21.891">
+<system-out><![CDATA[When user open twitter page.................................................passed
+Then twitter is opened in new tab...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can push on followUs" name="user could open site and push follow rss" time="22.396">
+<system-out><![CDATA[When user open rss page.....................................................passed
+Then rss is opened in new tab...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user can push on followUs" name="user could open site and push follow youtube" time="21.75">
+<system-out><![CDATA[When user open youtube page.................................................passed
+Then youtube is opened in new tab...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add product to wish list" name="user could open site add product to wish list" time="11.41">
 <system-out><![CDATA[When user push on add to wishlist...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Add product to shopping cart" name="user could open site add product to shopping cart" time="15.921">
+<testcase classname="Add product to shopping cart" name="user could open site add product to shopping cart" time="14.196">
 <system-out><![CDATA[When user navigate to product pages.........................................passed
 Then user push on add to shopping cart......................................passed
 ]]></system-out>
